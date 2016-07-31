@@ -24,6 +24,7 @@ class TreeHelper
      * @param int $parentId
      *
      * @return int|string - id of created sub tree root
+     * @throws \Exception
      */
     public function addSubTree(array $subTree, $contentKeyName, $childrenKeyName, $parentId = 0)
     {

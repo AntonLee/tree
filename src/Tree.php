@@ -171,6 +171,7 @@ class Tree
     /**
      * @param $id - node id
      * @param $parentId - new parent
+     * @throws \Exception
      */
     public function moveSubTree($id, $parentId)
     {
