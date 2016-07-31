@@ -85,4 +85,18 @@ class TreeHelper
 
         return $nodeChildren;
     }
+
+    public function prettyPrint(array $tree)
+    {
+        $result = '';
+        foreach ($tree as $node) {
+            $result .= sprintf(
+                '<li>(%03d) %s%s</li>',
+                $node['id'],
+                $node['content'],
+                (isset($node[$this->childrenKeyName])?$this->prettyPrint($node[$this->childrenKeyName]):'')
+            );
+        }
+        return '<ul>'.$result.'</ul>';
+    }
 }
