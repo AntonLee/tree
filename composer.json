@@ -1,0 +1,24 @@
+{
+    "name": "antonlee/tree",
+    "type": "project",
+    "require": {
+        "davedevelopment/phpmig": "^1.2",
+        "raveren/kint": "^1.0"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Anton Lee",
+            "email": "antonlee0@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "AntonLee\\": "src/"
+        }
+    },
+    "scripts": {
+        "migrate": "phpmig migrate",
+        "rollback": "phpmig rollback"
+    }
+}
